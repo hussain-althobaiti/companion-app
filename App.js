@@ -42,13 +42,13 @@ function Signup({ navigation }) {
           </TouchableNativeFeedback>
           <View style={styles.Buttons}>    
           <ImageBackground style={{width:'100%',height:'100%'}} source={require('./assets/BG.png')}>
-          <View style={styles.Button}>
+          <View style={styles.TextInput}>
           <TextInput placeholder='Name'/>
           </View>
-          <View style={styles.Button}>
+          <View style={styles.TextInput}>
             <TextInput placeholder='Email'/>
           </View>
-          <View style={styles.Button}>
+          <View style={styles.TextInput}>
           <TextInput placeholder='Password'/>
           </View>
           <View style={styles.Button}>
@@ -73,10 +73,10 @@ function Login({ navigation }) {
           </TouchableNativeFeedback>
           <View style={styles.Buttons}>    
           <ImageBackground style={{width:'100%',height:'100%'}} source={require('./assets/BG.png')}>
-          <View style={styles.Button}>
+          <View style={styles.TextInput}>
             <TextInput placeholder='Email'/>
           </View>
-          <View style={styles.Button}>
+          <View style={styles.TextInput}>
           <TextInput placeholder='Password'/>
           </View>
           <View style={styles.Button}>
@@ -146,4 +146,15 @@ const styles = StyleSheet.create({
     borderRadius:6,
     backgroundColor:'#f8f8f8'
   },
+  TextInput:{
+    marginTop:30,
+    borderWidth:2,
+    borderColor:'#000',
+    width:'70%',
+    alignSelf:'center',
+    justifyContent: 'center',
+    borderRadius:1,
+    backgroundColor:'#f8f8f8',
+    padding:3,
+  }
 })
