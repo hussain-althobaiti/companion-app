@@ -3,9 +3,12 @@ import { StyleSheet, Text, View ,Image ,TextInput, ImageBackground, TouchableNat
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button  } from './node_modules/react-native-elements';
-import Login from './Screens/Login.js';
+import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import HomeScreen from './Screens/HomeScreen';
+import Main from './Screens/Main';
+
+https://www.youtube.com/watch?v=6F-J7Ek5CGA
 
 
 const Stack = createStackNavigator();
@@ -16,13 +19,14 @@ function MyStack() {
       <Stack.Screen name="Home" component={HomeScreen}  options={{ title: 'My home',headerShown:false }} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Signup" component={Signup} />
+      <Stack.Screen name="Main" component={Main} options={{ title: 'Main',headerShown:false }} independent={true} initialParams />
     </Stack.Navigator>
   );
 }
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer independent={true} >
       <MyStack />
     </NavigationContainer>
   );
