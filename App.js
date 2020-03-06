@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View ,Image ,TextInput, ImageBackground, TouchableNativeFeedback ,Input} from 'react-native';
+import { StyleSheet, Text, View ,Image ,TextInput, ImageBackground, TouchableNativeFeedback } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button  } from './node_modules/react-native-elements';
@@ -97,7 +97,7 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={HomeScreen}  options={{ title: 'My home',headerShown:false }} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Signup" component={Signup} />
     </Stack.Navigator>
