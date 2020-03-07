@@ -2,22 +2,12 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Main from './Main';
+import Post from './Post';
+import Profile from './Profile';
+import Search from './Search';
 
-function HomeScreen1() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-  
-  function SettingsScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-    );
-  }
+
   
 
   const Tab = createBottomTabNavigator();
@@ -25,12 +15,12 @@ function HomeScreen1() {
 
 const NarBar = () => {
     return (
-        <NavigationContainer independent={true}>
         <Tab.Navigator>
-          <Tab.Screen name="Home1" component={HomeScreen1} />
-          <Tab.Screen name="Settings" component={SettingsScreen} />
+          <Tab.Screen name="Main" component={Main} />
+          <Tab.Screen name="Post" component={Post} />
+          <Tab.Screen name="Profile" component={Profile} />
+          <Tab.Screen name="Search" component={Search} />
         </Tab.Navigator>
-      </NavigationContainer>
   
     )
 }
