@@ -29,7 +29,7 @@ function Likes() {
   
 function MyTabs() {
     return (
-      <Tab.Navigator>
+      <Tab.Navigator style={styles.Tab}  tabBarOptions={{activeTintColor:'#00F5A0' ,labelStyle: { color:'#000000',fontSize: 20 ,fontWeight: 'bold' },indicatorStyle:{backgroundColor:'#00F5A0' ,height:5} ,  }}>
         <Tab.Screen name="New" component={New} />
         <Tab.Screen name="Trending" component={Trending} />
         <Tab.Screen name="Likes" component={Likes} />
@@ -51,5 +51,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#F9F9F8',
         justifyContent:'center',
         alignItems:'center',
+      },
+      Tab:{
+          marginTop:'6%'
       },
 })
