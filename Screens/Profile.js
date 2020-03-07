@@ -1,14 +1,22 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Profile = () => {
+const Profile = (props) => {
     return (
-        <View>
-            <Text></Text>
+        <View style={styles.container} > 
+            <Text>Profile</Text>
         </View>
     )
 }
 
 export default Profile
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({ 
+   container: {
+    flex: 1,
+    backgroundColor: '#F9F9F8',
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+})

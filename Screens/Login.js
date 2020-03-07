@@ -23,9 +23,7 @@ function Login(props) {
             <Button
             linearGradientProps={{colors: ['rgba(200, 78, 137, 1)', 'rgba(241, 95, 121, 1)'],
             start: { x: 0, y: 0.5 },
-            end: { x: 1, y: 0.5 },}} title="Login" onPress={()=>props.navigation.navigate('Main', {
-              screen: 'Settings',})
-            }/>
+            end: { x: 1, y: 0.5 },}} title="Login" onPress={()=>props.navigation.navigate('Main')}/>
             </View>
             </ImageBackground>
             </View>  
