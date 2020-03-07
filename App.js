@@ -8,6 +8,8 @@ import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import HomeScreen from './Screens/HomeScreen';
 import Main from './Screens/Main';
+import { enableScreens } from 'react-native-screens';
+enableScreens();
 
 
 
