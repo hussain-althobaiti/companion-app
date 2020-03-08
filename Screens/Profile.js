@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View ,TouchableNativeFeedback} from 'react-native'
-import { Avatar ,Button} from "react-native-elements";
-import { ScrollPager } from 'react-native-tab-view';
+import { Avatar ,Button } from "react-native-elements";
 import { ScrollView } from 'react-native-gesture-handler';
 
 const Profile = (props) => {

@@ -6,7 +6,7 @@ const InChat = (props) => {
     return (
         <View style={styles.container} > 
             <Text>InChat</Text>
-            <Button  onPress={() => props.navigation.navigate('ChatList')} title="Solid Button"/>
+            <Button  onPress={() => props.navigation.navigate('ChatList')} title="go back"/>
         </View>
     )
 }
