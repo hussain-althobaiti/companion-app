@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, Button  ,ScrollView} from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 const Tab = createMaterialTopTabNavigator();
 
@@ -13,9 +13,11 @@ function Likes() {
   
   function New() {
     return (
+      <ScrollView>
       <View style={styles.container}>
         <Text>New!</Text>
       </View>
+      </ScrollView>
     );
   }
   
