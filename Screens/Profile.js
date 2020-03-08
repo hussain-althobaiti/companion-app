@@ -12,7 +12,9 @@ const Profile = (props) => {
         rounded
         title="me"
         onPress={() => console.log("Works!")}
-        activeOpacity={0.7}/>
+        activeOpacity={0.7}
+        showEditButton= {true}
+        />
          <Text>Profile name</Text>
         <View style={styles.Button}>
          <Button title="follow" type="outline"/>
