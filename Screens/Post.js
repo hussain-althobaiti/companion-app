@@ -7,7 +7,7 @@ const Post = (props) => {
         <View style={styles.container} > 
         <Text style={styles.Text}>Post</Text>
         <View style={styles.TextInput}>
-        <TextInput />
+        <TextInput placeholder='what’s happening ?' />
         <View style={styles.icons}>
         <FontAwesome  name='photo' size={30}/>
         <AntDesign name="camerao" size={30}/>
