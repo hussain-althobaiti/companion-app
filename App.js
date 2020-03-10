@@ -4,13 +4,28 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Button  } from './node_modules/react-native-elements';
+import * as firebase from 'firebase';
+
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import HomeScreen from './Screens/HomeScreen';
 import Main from './Screens/Main';
 import { enableScreens } from 'react-native-screens';
+
 enableScreens();
 
+var firebaseConfig = {
+  apiKey: "AIzaSyBGXmBiJhQsAiM3lD5YkLEXxg796Jy2-i8",
+  authDomain: "companion-84daa.firebaseapp.com",
+  databaseURL: "https://companion-84daa.firebaseio.com",
+  projectId: "companion-84daa",
+  storageBucket: "companion-84daa.appspot.com",
+  messagingSenderId: "138698256117",
+  appId: "1:138698256117:web:d895ae378cb9db82b1dfbc",
+  measurementId: "G-N0EBX4KVQM"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 
 const Stack = createStackNavigator();
@@ -30,7 +45,7 @@ function MyStack() {
 
 export default function App() {
   return (
-    <NavigationContainer >
+    <NavigationContainer independent={true} >
       <MyStack />
     </NavigationContainer>
   );

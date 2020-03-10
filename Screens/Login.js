@@ -1,33 +1,65 @@
 import React,{useState} from '../node_modules/react';
-import { StyleSheet, Text, View ,Image ,TextInput, ImageBackground, TouchableNativeFeedback , Alert} from 'react-native';
+import { StyleSheet, Text, View ,Image ,TextInput, ImageBackground, TouchableNativeFeedback , Alert, KeyboardAvoidingView, SafeAreaView} from 'react-native';
 import { Button  } from '../node_modules/react-native-elements';
+import * as firebase from 'firebase';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 function Login(props) {
+
+
+  const [state, setstate] = useState(
+    {
+    email:'',
+    password:'',
+    error: null,}
+    );
+
+    handlerLogin =()=>{
+     const email=(state.email)
+     const password=(state.password)  
+     
+     console.log(state);
+     firebase.auth().signInWithEmailAndPassword(email,password).catch(error => setstate(errorMessage=error.massage))
+     console.log(state , '55555555 ');
+
+    };
+
+
+
     return (
+    <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>      
       <View style={styles.container}>
             <TouchableNativeFeedback>
             <View style={styles.image}>
-            <Image style={{width:'90%',height:'25%'}} source={require('../assets/loginLogo.png')} />
+            <Image style={{width:'90%',height:'35%'}} source={require('../assets/loginLogo.png')} />
             </View>
             </TouchableNativeFeedback>
             <View style={styles.Buttons}>    
             <ImageBackground style={{width:'100%',height:'100%'}} source={require('../assets/BG.png')}>
             <View style={styles.TextInput}>
-              <TextInput placeholder='Email'/>
+              <TextInput placeholder='Email@email.com' onChange={(e)=>setstate(({email:e.target.value}))}/>
             </View>
             <View style={styles.TextInput}>
-            <TextInput placeholder='Password'/>
+            <TextInput placeholder='Password' secureTextEntry onChange={(e)=>setstate()} />
             </View>
+            <TouchableOpacity onPress={handlerLogin}>
             <View style={styles.Button}>
             <Button
             linearGradientProps={{colors: ['rgba(200, 78, 137, 1)', 'rgba(241, 95, 121, 1)'],
             start: { x: 0, y: 0.5 },
             end: { x: 1, y: 0.5 },}} title="Login" onPress={()=>props.navigation.navigate('Main')}/>
             </View>
+            </TouchableOpacity>
+              
+              {/* <View>
+                {state.error &&<Text>{state.error} </Text> 
+                }</View> */}
             </ImageBackground>
-            </View>  
+            </View>
           </View>
+
+            </KeyboardAvoidingView>
     );
   }
 
@@ -50,7 +82,7 @@ const styles = StyleSheet.create({
     },
   
     Buttons:{
-      flex:1.5,
+      flex:2,
       justifyContent: 'center',
   
     },
@@ -73,7 +105,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       borderRadius:1,
       backgroundColor:'#f8f8f8',
-      padding:3,
+      padding:4,
     }
   })
   

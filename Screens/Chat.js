@@ -9,27 +9,27 @@ const list = [
   {
     name: 'Amy Farha',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-    subtitle: 'Vice President'
+    subtitle: 'I work in an office'
   },
   {
     name: 'adhamdannaway',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-    subtitle: 'Vice Chairman'
+    subtitle: 'Full time student and rockin it!'
   },
   {
     name: 'AM_Kn2',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/AM_Kn2/128.jpg',
-    subtitle: 'Vice Chairman'
+    subtitle: 'Good question - I am still trying to figure that out!'
   },
   {
     name: 'BillS Kenney',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg',
-    subtitle: 'Vice Chairman'
+    subtitle: 'How often do you work out?'
   },
   {
     name: 'Brian Purkiss',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/BrianPurkiss/128.jpg',
-    subtitle: 'Vice Chairman'
+    subtitle: 'Why did you take this test?'
   },
   {
     name: 'Bryan Horsey',
@@ -73,7 +73,7 @@ function ChatList(props) {
   <ScrollView>
   {
     list.map((l, i) => (
-      <ListItem button onPress={() => {props.navigation.navigate('InChat')}}
+      <ListItem button onPress={() => {props.navigation.navigate('InChat', {person: l}) }}
         key={i}
         leftAvatar={{ source: { uri: l.avatar_url } }}
         title={l.name}
@@ -90,7 +90,7 @@ function MyStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="ChatList" component={ChatList} options={{ title: 'Chats' }} />
-      <Stack.Screen name="InChat" component={InChat}  options={{ title: 'InChat' }} />
+      <Stack.Screen name="InChat" component={InChat}  options={{title:' '}}/>
     </Stack.Navigator>
   );
 }

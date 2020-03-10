@@ -6,7 +6,7 @@ const Search = (props) => {
             <TouchableNativeFeedback>
         <View style={styles.container} > 
             <Text style={styles.Text}>Search</Text>
-            <TextInput placeholder='Search '  style={styles.TextInput}/>
+            <TextInput placeholder='Search'  style={styles.TextInput}/>
 
         </View>
             </TouchableNativeFeedback>

@@ -1,11 +1,9 @@
 import React ,{useState, useEffect} from 'react'
-import { StyleSheet, Text, View ,TextInput} from 'react-native'
-import { FontAwesome,Ionicons,MaterialCommunityIcons ,AntDesign ,MaterialIcons} from '@expo/vector-icons';
+import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView} from 'react-native'
+import { FontAwesome,Feather,MaterialCommunityIcons ,AntDesign ,MaterialIcons} from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
 import {Camera} from 'expo-camera';
-
-
 
 const Post = (props) => {
   const [type, setType] = useState(Camera.Constants.Type.back);
@@ -31,12 +29,16 @@ const Post = (props) => {
         <View style={styles.TextInput}>
         <TextInput placeholder='what’s happening ?' />
         <View style={styles.icons}>
+          <View style={styles.icon}>
         <FontAwesome onPress={_pickImage} name='photo' size={30}/>
-        <AntDesign name="camerao" size={30}  onPress={() => {              setType(
+          </View>
+          <View style={styles.icon}>
+        <Feather name="camera" size={30}  onPress={() => {              setType(
                 type === Camera.Constants.Type.back
                   ? Camera.Constants.Type.front
                   : Camera.Constants.Type.back
               );}}/>
+              </View>
         </View>
         </View>
         </View>
@@ -72,11 +74,14 @@ const styles = StyleSheet.create({
     borderWidth:2,
     padding:'2%',
     margin:"2%",
-    height:'25%',
+    minHeight:'25%',
   },
-  icons:{
-    marginTop:'22%',
+  icons:{    
     flexDirection:'row'
+  },
+  icon:{    
+    marginTop:'27%',
+    paddingLeft:'1.5%'
   },
 })
 

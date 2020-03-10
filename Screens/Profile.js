@@ -1,9 +1,44 @@
 import React from 'react'
-import { StyleSheet, Text, View ,TouchableNativeFeedback} from 'react-native'
-import { Avatar ,Button } from "react-native-elements";
+import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView} from 'react-native'
+import { Avatar ,Button , } from "react-native-elements";
 import { ScrollView } from 'react-native-gesture-handler';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const Profile = (props) => {
+const ProfileStack = createStackNavigator();
+
+const EditProfile =(props )=>{
+    return (
+
+    <View>
+        <ScrollView>
+        <Text>Edit Profile</Text>
+        <View  style={styles.inputs} >
+        <TextInput style={styles.input}  placeholder='Username'/>
+        <TextInput style={styles.input}  placeholder='Birthday'/>
+        <TextInput style={styles.input}  placeholder='Gender '/>
+        <TextInput style={styles.input}  placeholder='About '/>
+        <TextInput style={styles.input}  placeholder='#####'/>
+        <TextInput style={styles.input}  placeholder='#####'/>
+        </View>
+
+        <KeyboardAvoidingView>
+        <Button title='Save' onPress={() => props.navigation.navigate('SetProfile')} />
+        <Button title='Cancel' onPress={() => props.navigation.goBack()} />
+        </KeyboardAvoidingView>
+        </ScrollView>
+
+    </View>
+    );
+
+}
+
+const Profile = (props ) => {
+    return (
+        <EditStack/>
+    );
+}
+
+const SetProfile = (props ) => {
     return (
         <ScrollView>
         <View style={styles.container} > 
@@ -11,7 +46,7 @@ const Profile = (props) => {
         size="xlarge"
         rounded
         title="me"
-        onPress={() => console.log("Works!")}
+        onPress={() => props.navigation.navigate('EditProfile')} 
         activeOpacity={0.7}
         showEditButton= {true}
         />
@@ -52,10 +87,19 @@ const Profile = (props) => {
         </View>
         </View>
         </ScrollView>
-
     )
 }
 
+
+function EditStack() {
+    return (
+      <ProfileStack.Navigator >
+        <ProfileStack.Screen name="SetProfile" component={SetProfile} options={{ title: 'Profile',headerShown:false }} />
+        <ProfileStack.Screen name="EditProfile" component={EditProfile}  options={{ title: 'Edit Profile' }} />
+      </ProfileStack.Navigator>
+    );
+  }
+  
 export default Profile
 
 const styles = StyleSheet.create({ 
@@ -79,5 +123,13 @@ const styles = StyleSheet.create({
     Button:{
         margin:'2%',
 
+    },
+    input:{
+        margin:'2%',
+        backgroundColor:"#fff",
+        borderBottomColor:'#000',
+        borderWidth: 1,
+        fontSize:14,
+        padding:'1%',
     }
 })
