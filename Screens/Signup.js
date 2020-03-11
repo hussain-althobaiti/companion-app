@@ -7,22 +7,25 @@ import * as firebase from 'firebase';
 function Signup(props) {
   const [state, setstate] = useState(
     {
-    name:'',
-    email:'',
-    password:'',
-    error: null,}
+    name:'1',
+    email:'1@1.com',
+    password:'123456',
+    error: '',
+    valid:false,
+  }
     );
-  
+  // (e)=>setstate({...state, error:e})
   
     handlersignup =()=>{
       console.log(state);
       const name=(state.name)
       const email=(state.email)
       const password=(state.password)  
+      const error=(state.error)  
        
-       firebase.auth().createUserWithEmailAndPassword(email,password).catch(console.log("error"))
+       firebase.auth().createUserWithEmailAndPassword(email,password).then(() =>props.navigation.navigate('Login')).catch((e)=>setstate({...state, error:e}))
        console.log(state , '55555555 ');
-  
+
       };
   
   return (
@@ -51,11 +54,12 @@ function Signup(props) {
             start: { x: 0, y: 0.5 },
             end: { x: 1, y: 0.5 },}} title="Signup" onPress={handlersignup}/>
             </View>
+            <View >
+              <Text style={styles.error} >{state.error.message}</Text>
+            </View>
             </ImageBackground>
-
             </SafeAreaView >
             </View>  
-          
           </View>
             </KeyboardAvoidingView>
 
@@ -70,7 +74,14 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#F9F9F8',
     },
-  
+    error:{
+      color:'#F44336',
+      alignItems:'center',
+      alignSelf:'center',
+      fontSize:16,
+      fontWeight:'bold',
+      margin:'2%',
+    },  
     image:{
       flex: 1,
       justifyContent:'center',

@@ -12,7 +12,9 @@ function Login(props) {
     {
     email:'1',
     password:'1',
-    error: null,}
+    error: ' ',
+    valid:false,
+  }
     );
 
     handlerLogin =()=>{
@@ -20,11 +22,8 @@ function Login(props) {
      const email=(state.email)
      const password=(state.password)  
      
-     
-     firebase.auth().signInWithEmailAndPassword(email,password).catch(error => setstate(errorMessage=error.massage))
+     firebase.auth().signInWithEmailAndPassword(email,password).then(() =>props.navigation.navigate('Main')).catch((e)=>setstate({...state, error:e}))
      console.log(state , '55555555 ');
-     
-
     };
 
 
@@ -45,18 +44,16 @@ function Login(props) {
             <View style={styles.TextInput}>
             <TextInput placeholder='Password' secureTextEntry onChangeText={(text)=>setstate({...state, password:text})} />
             </View>
-            <TouchableOpacity onPress={handlerLogin}>
             <View style={styles.Button}>
             <Button
             linearGradientProps={{colors: ['rgba(200, 78, 137, 1)', 'rgba(241, 95, 121, 1)'],
             start: { x: 0, y: 0.5 },
-            end: { x: 1, y: 0.5 },}} title="Login" onPress={()=>props.navigation.navigate('Main')}/>
+            end: { x: 1, y: 0.5 },}} title="Login" onPress={handlerLogin} />
             </View>
-            </TouchableOpacity>
               
-              {/* <View>
-                {state.error &&<Text>{state.error} </Text> 
-                }</View> */}
+            <View >
+              <Text style={styles.error} >{state.error.message}</Text>
+            </View>
             </ImageBackground>
             </View>
           </View>
@@ -72,7 +69,14 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#F9F9F8',
     },
-  
+    error:{
+      color:'#F44336',
+      alignItems:'center',
+      alignSelf:'center',
+      fontSize:16,
+      fontWeight:'bold',
+      margin:'2%',
+    },
     image:{
       flex: 1,
       justifyContent:'center',
