@@ -1,11 +1,32 @@
 import React,{useState} from '../node_modules/react';
 import { StyleSheet, Text, View ,Image ,TextInput, ImageBackground, TouchableNativeFeedback,Alert,SafeAreaView  ,ScrollView ,KeyboardAvoidingView } from 'react-native';
 import { Button  } from '../node_modules/react-native-elements';
+import * as firebase from 'firebase';
 
 
 function Signup(props) {
-    return (
-            <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
+  const [state, setstate] = useState(
+    {
+    name:'',
+    email:'',
+    password:'',
+    error: null,}
+    );
+  
+  
+    handlersignup =()=>{
+      console.log(state);
+      const name=(state.name)
+      const email=(state.email)
+      const password=(state.password)  
+       
+       firebase.auth().createUserWithEmailAndPassword(email,password).catch(console.log("error"))
+       console.log(state , '55555555 ');
+  
+      };
+  
+  return (
+    <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
       <View style={styles.container}>
             <TouchableNativeFeedback>
             <View style={styles.image}>
@@ -16,33 +37,19 @@ function Signup(props) {
             <SafeAreaView >
             <ImageBackground style={{width:'100%',height:'100%'}} source={require('../assets/BG.png')}>
             <View style={styles.TextInput}>
-            <TextInput placeholder='Name'/>
+            <TextInput placeholder='Name' onChangeText={(text)=>setstate({...state, name:text})} />
             </View>
             <View style={styles.TextInput}>
-              <TextInput placeholder='Email'/>
+              <TextInput placeholder='Email' textContentType='emailAddress' onChangeText={(text)=>setstate({...state, email:text})}/>
             </View>
             <View style={styles.TextInput}>
-            <TextInput placeholder='Password' secureTextEntry textContentType='password'/>
+            <TextInput placeholder='Password' secureTextEntry onChangeText={(text)=>setstate({...state, password:text})}/>
             </View>
             <View style={styles.Button}>
             <Button
             linearGradientProps={{colors: ['rgba(200, 78, 137, 1)', 'rgba(241, 95, 121, 1)'],
             start: { x: 0, y: 0.5 },
-            end: { x: 1, y: 0.5 },}} title="Signup" onPress={()=>Alert.alert(
-              'Alert Title',
-              'My Alert Msg',
-              [
-                {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
-                {
-                  text: 'Cancel',
-                  onPress: () => console.log('Cancel Pressed'),
-                  style: 'cancel',
-                },
-                {text: 'OK', onPress: () => console.log('OK Pressed')},
-              ],
-              {cancelable: false},
-            )
-            }/>
+            end: { x: 1, y: 0.5 },}} title="Signup" onPress={handlersignup}/>
             </View>
             </ImageBackground>
 
