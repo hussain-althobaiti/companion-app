@@ -10,16 +10,17 @@ function Login(props) {
 
   const [state, setstate] = useState(
     {
-    email:'',
-    password:'',
+    email:'1',
+    password:'1',
     error: null,}
     );
 
     handlerLogin =()=>{
+    console.log(state);
      const email=(state.email)
      const password=(state.password)  
      
-     console.log(state);
+     
      firebase.auth().signInWithEmailAndPassword(email,password).catch(error => setstate(errorMessage=error.massage))
      console.log(state , '55555555 ');
 
@@ -38,10 +39,10 @@ function Login(props) {
             <View style={styles.Buttons}>    
             <ImageBackground style={{width:'100%',height:'100%'}} source={require('../assets/BG.png')}>
             <View style={styles.TextInput}>
-              <TextInput placeholder='Email@email.com' onChange={(e)=>setstate(({email:e.target.value}))}/>
+              <TextInput placeholder='Email@email.com' onChangeText={(text)=>setstate({...state, email:text})}/>
             </View>
             <View style={styles.TextInput}>
-            <TextInput placeholder='Password' secureTextEntry onChange={(e)=>setstate()} />
+            <TextInput placeholder='Password' secureTextEntry onChangeText={(text)=>setstate({...state, password:text})} />
             </View>
             <TouchableOpacity onPress={handlerLogin}>
             <View style={styles.Button}>
