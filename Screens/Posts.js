@@ -5,19 +5,29 @@ import {MaterialIcons,AntDesign } from '@expo/vector-icons';
 
 
 
+function ThePost(props) {
+    return (
+      <View >
+          <Text>post</Text>
+      </View>
+    );
+  }
+
+
 const Posts = (props) => {
 
     const [state, setstate] = useState("#fff")
     return (
+
         <View style={styles.Posts}>
         <View style={styles.Post} > 
          <Avatar rounded size="medium" source={props.Avatar}/>
-         <View style={styles.text}>
-         <Text > {props.text}</Text>
+         <View >
+         <Text style={styles.text}> {props.text}</Text>
           </View>
         <View style={styles.icons}>
-         <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#ea424f')}else{setstate('#fff')}}} color={state} name='heart' size={27}/>
-         <MaterialIcons onPress={()=>{console.log("comments");}} name='comment' color='#fff' size={27}/>
+         <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#ea424f')}else{setstate('#fff')}}} color={state} name='heart' size={30}/>
+         <MaterialIcons onPress={()=>{(console.log("comment"))}}  name='comment' color='#fff' size={30}/>
          </View>
         </View>
     </View>
@@ -36,17 +46,20 @@ const styles = StyleSheet.create({
         width:'95%',
         minWidth:'95%',
         marginTop:'2%',
-        fontSize:10,
+        fontSize:11,
         padding:'3%',
         borderRadius:5,
     },
     icons:{
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        paddingTop:'5%',
+        paddingLeft:'2%',
+        paddingRight:'2%',
     },
     text:{
-        justifyContent:'center',
-        padding:20,
+        fontSize:15,
+        padding:"4%",
     },
 
 })
