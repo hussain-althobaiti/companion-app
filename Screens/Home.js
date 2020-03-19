@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button  ,ScrollView,ListItem} from 'react-native'
+import { StyleSheet, Text, View, Button  ,ScrollView} from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Posts from './Posts';
 const Tab = createMaterialTopTabNavigator();
@@ -7,7 +7,7 @@ const list = [
   {
     name: 'Amy Farha',
     avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-    subtitle: 'Vice President'
+    subtitle: 'Vice President  cjniej wdniwnd dn3wid in2eni2nd idniw indin ndin3 nindi3 idin'
   },
   {
     name: 'adhamdannaway',
@@ -61,42 +61,38 @@ const list = [
   },
 ]
 
-function makeid(length) {
-  var result           = '';
-  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  var charactersLength = characters.length;
-  for ( var i = 0; i < length; i++ ) {
-     result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}
+
 
 function Likes() {
     return (
       <ScrollView>
       <View style={styles.container}>
-        <Posts text={ makeid(50)}/>   
-        <Posts text={ makeid(50)}/>   
-        <Posts text={ makeid(40)}/>   
-        <Posts text={ makeid(50)}/>   
-        <Posts text={ makeid(30)}/>   
-        <Posts text={ makeid(10)}/>   
-        <Posts text={ makeid(80)}/>   
+      {
+    list.map((l, i) => (
+      <Posts button onPress={() => {props.navigation.navigate('InChat', {person: l}) }}
+        key={i}
+        Avatar={{ uri: l.avatar_url  }}
+        title={l.name}
+        text={l.subtitle}
+        />))}
+ 
       </View>
       </ScrollView>
     );
   }
   function New() {
     return (
-      <ScrollView>
+      <ScrollView>     
       <View style={styles.container}>
-        <Posts text={ makeid(54)}/>   
-        <Posts text={ makeid(84)}/>   
-        <Posts text={ makeid(48)}/>   
-        <Posts text={ makeid(49)}/>   
-        <Posts text={ makeid(94)}/>   
-        <Posts text={ makeid(75)}/>   
-        <Posts text={ makeid(15)}/>   
+ 
+      {
+    list.map((l, i) => (
+      <Posts button onPress={() => {props.navigation.navigate('InChat', {person: l}) }}
+        key={i}
+        Avatar={{ uri: l.avatar_url  }}
+        title={l.name}
+        text={l.subtitle}
+        />))}     
       </View>
       </ScrollView>
     );
@@ -106,15 +102,15 @@ function Likes() {
     return (
       <ScrollView>
       <View style={styles.container}>
-        <Posts text={ makeid(78)}/>   
-        <Posts text={ makeid(15)}/>   
-        <Posts text={ makeid(54)}/>   
-        <Posts text={ makeid(55)}/>   
-        <Posts text={ makeid(48)}/>   
-        <Posts text={ makeid(54)}/>   
-        <Posts text={ makeid(48)}/>   
-        <Posts text={ makeid(48)}/>   
-        <Posts text={ makeid(48)}/>   
+      {
+    list.map((l, i) => (
+      <Posts button onPress={() => {props.navigation.navigate('InChat', {person: l}) }}
+        key={i}
+        Avatar={{ uri: l.avatar_url  }}
+        title={l.name}
+        text={l.subtitle}
+        />))}
+ 
       </View>
       </ScrollView>    );
   }

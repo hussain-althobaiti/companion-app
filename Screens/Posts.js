@@ -1,20 +1,27 @@
-import React from 'react'
-import { StyleSheet, View,Text, ScrollView} from 'react-native'
-import { Button ,Tile ,Avatar  } from '../node_modules/react-native-elements';
-import { EvilIcons } from '@expo/vector-icons';
+import React, {useState}from 'react'
+import { StyleSheet, View,Text, ScrollView,TouchableNativeFeedback} from 'react-native'
+import { Button ,Tile ,Avatar } from '../node_modules/react-native-elements';
+import {MaterialIcons,AntDesign } from '@expo/vector-icons';
+
 
 
 const Posts = (props) => {
+
+    const [state, setstate] = useState("#fff")
     return (
-    <View style={styles.Posts}>
+        <View style={styles.Posts}>
+            <TouchableNativeFeedback>
         <View style={styles.Post} > 
-         <Avatar rounded source={{uri:'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',}}/>
-         <Text> {props.text}</Text> 
+         <Avatar rounded size="medium" source={props.Avatar}/>
+         <View style={styles.text}>
+         <Text > {props.text}</Text>
+          </View>
          <View style={styles.icons}>
-         <EvilIcons name='like' size={35}/>
-         <EvilIcons name='comment' size={35}/>
+         <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#ea424f')}else{setstate('#fff')}}} color={state} name='heart' size={27}/>
+         <MaterialIcons name='comment' color='#fff' size={27}/>
          </View>
         </View>
+         </TouchableNativeFeedback>
     </View>
     )
 }
@@ -37,6 +44,11 @@ const styles = StyleSheet.create({
     },
     icons:{
         flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    text:{
+        justifyContent:'center',
+        padding:20,
     },
 
 })

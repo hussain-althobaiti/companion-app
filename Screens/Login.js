@@ -57,8 +57,7 @@ function Login(props) {
             </ImageBackground>
             </View>
           </View>
-
-            </KeyboardAvoidingView>
+          </KeyboardAvoidingView>
     );
   }
 

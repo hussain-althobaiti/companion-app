@@ -28,6 +28,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
+
+
 const Stack = createStackNavigator();
 
 function MyStack() {
