@@ -4,16 +4,6 @@ import { Button ,Tile ,Avatar } from '../node_modules/react-native-elements';
 import {MaterialIcons,AntDesign } from '@expo/vector-icons';
 
 
-
-function ThePost(props) {
-    return (
-      <View >
-          <Text>post</Text>
-      </View>
-    );
-  }
-
-
 const Posts = (props) => {
 
     const [state, setstate] = useState("#fff")
@@ -26,8 +16,8 @@ const Posts = (props) => {
          <Text style={styles.text}> {props.text}</Text>
           </View>
         <View style={styles.icons}>
-         <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#ea424f')}else{setstate('#fff')}}} color={state} name='heart' size={30}/>
-         <MaterialIcons onPress={()=>{(console.log("comment"))}}  name='comment' color='#fff' size={30}/>
+         <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#F95959')}else{setstate('#fff')}}} color={state} name='heart' size={30}/>
+         <MaterialIcons onPress={()=>{console.log('ThePost');}}  name='comment' color='#fff' size={30}/>
          </View>
         </View>
     </View>

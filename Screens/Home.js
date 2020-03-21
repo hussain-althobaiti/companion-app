@@ -1,8 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button  ,ScrollView} from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 import Posts from './Posts';
+
 const Tab = createMaterialTopTabNavigator();
+
 const list = [
   {
     name: 'Amy Farha',
@@ -63,13 +66,13 @@ const list = [
 
 
 
-function Likes() {
+function Likes(props) {
     return (
       <ScrollView>
       <View style={styles.container}>
       {
     list.map((l, i) => (
-      <Posts button onPress={() => {props.navigation.navigate('InChat', {person: l}) }}
+      <Posts
         key={i}
         Avatar={{ uri: l.avatar_url  }}
         title={l.name}
@@ -112,7 +115,8 @@ function Likes() {
         />))}
  
       </View>
-      </ScrollView>    );
+      </ScrollView>    
+      );
   }
   
 function MyTabs() {
@@ -127,7 +131,7 @@ function MyTabs() {
   
 const Home = (props) => {
     return (
-        <MyTabs/>
+    <MyTabs/>
         )
 }
 

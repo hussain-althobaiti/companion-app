@@ -1,15 +1,17 @@
 import React from 'react'
-import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView} from 'react-native'
-import { Avatar ,Button , } from "react-native-elements";
+import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView,} from 'react-native'
+import { Avatar  ,Button } from "react-native-elements";
 import { ScrollView } from 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useState } from 'react'
 
 const ProfileStack = createStackNavigator();
 
 const EditProfile =(props )=>{
+    
     return (
-
-    <View>
+        
+        <View>
         <ScrollView>
         <Text>Edit Profile</Text>
         <View  style={styles.inputs} >
@@ -21,26 +23,27 @@ const EditProfile =(props )=>{
         <TextInput style={styles.input}  placeholder='#####'/>
         </View>
 
-        <KeyboardAvoidingView>
-        <Button title='Save' onPress={() => props.navigation.navigate('SetProfile')} />
+        <KeyboardAvoidingView style={styles.Buttons}>
+        <Button buttonStyle={{marginBottom:'2%'}} title='Save' onPress={() => props.navigation.navigate('SetProfile')} />
         <Button title='Cancel' onPress={() => props.navigation.goBack()} />
         </KeyboardAvoidingView>
         </ScrollView>
 
     </View>
     );
-
+    
 }
 
 const Profile = (props ) => {
     return (
         <EditStack/>
-    );
-}
-
-const SetProfile = (props ) => {
-    return (
-        <ScrollView>
+        );
+    }
+    
+    const SetProfile = (props ) => {
+        const [state, setstate] = useState('#fff')
+        return (
+            <ScrollView>
         <View style={styles.container} > 
         <Avatar
         size="xlarge"
@@ -51,9 +54,9 @@ const SetProfile = (props ) => {
         showEditButton= {true}
         />
          <Text>Profile name</Text>
-        <View style={styles.Button}>
-         <Button title="follow" type="outline"/>
-         <Button title="message" type="outline"/>
+        <View style={styles.Buttons}>
+         <Button buttonStyle={styles.Button} titleStyle={{color:state ,fontWeight:'bold',fontSize:20,width:'80%'}} onPress={()=>{if(state==='#000'){setstate('#F95959')}else{setstate('#000')}}} title="Follow"  />
+         <Button buttonStyle={styles.Button} titleStyle={{color:'#000'}} title="Message" />
          </View>
         <View style={styles.about}>
             <Text>About</Text>
@@ -121,8 +124,17 @@ const styles = StyleSheet.create({
     borderRadius:5,
     },
     Button:{
-        margin:'2%',
-
+        marginTop:10,
+        borderWidth:2,
+        borderColor:'#000',
+        width:'100%',
+        alignSelf:'center',
+        justifyContent: 'center',
+        borderRadius:6,
+        backgroundColor:'#fff',
+    },
+    Buttons:{
+        margin:'2%',     
     },
     input:{
         margin:'2%',
