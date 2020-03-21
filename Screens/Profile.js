@@ -41,7 +41,7 @@ const Profile = (props ) => {
     }
     
     const SetProfile = (props ) => {
-        const [state, setstate] = useState('#fff')
+        const [state, setstate] = useState('#000')
         return (
             <ScrollView>
         <View style={styles.container} > 
