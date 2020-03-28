@@ -19,7 +19,7 @@ const Posts = (props) => {
          <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#F95959')}else{setstate('#fff')}}} color={state} name='heart' size={30}/>
          <MaterialIcons onPress={()=>{}}  name='comment' color='#fff' size={30}/>
          </View>
-          <TouchableHighlight  activeOpacity={0.6} underlayColor="#DDDDDD" onPress={() =>{ alert('Pressed!')}}>
+          <TouchableHighlight  activeOpacity={0.3} underlayColor="#fff" onPress={() =>{ alert('Pressed!')}}>
               <Text>show comment </Text>
            </TouchableHighlight>
         </View>
