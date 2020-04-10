@@ -150,27 +150,27 @@ const styles = StyleSheet.create({
           {
             name: 'kurafire',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/kurafire/128.jpg',
-            subtitle: 'I was told there is a difference between temper and temperament. How can one explain this difference?'
+            subtitle: 'What can be added to the happiness of a man who is in health, out of debt, and has a clear conscience?'
           },
           {
             name: 'moscoz',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/moscoz/128.jpg',
-            subtitle: '  I ll be going to Boston a few times this month for work.'
+            subtitle: 'Love is above money. The latter cant give as much happiness as the former.'
           },
           {
             name: '91bilal',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/91bilal/128.jpg',
-            subtitle: 'How do you think that Britons should vote in the upcoming referendum? What do you think the results will be like?'
+            subtitle: 'Seek success, but always be prepared for random cats.'
           },
           {
             name: 'igorgarybaldi',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/igorgarybaldi/128.jpg',
-            subtitle: 'Nothing acts as a better antidote for romance than young men and women doing geometry together at eight o clock every morning.'
+            subtitle: 'The fact that theres a stairway to heaven and a highway to hell explains life well.'
           },
           {
             name: 'calebogden',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg',
-            subtitle: 'He used to get confused between soldiers and shoulders, but as a military man, he now soldiers responsibility.'
+            subtitle: 'The quick brown fox jumps over the lazy dog.'
           },
           {
             name: 'joelhelin',
@@ -180,27 +180,27 @@ const styles = StyleSheet.create({
           {
             name: 'kushsolitary',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/kushsolitary/128.jpg',
-            subtitle: 'Car safety systems have come a long way, but he was out to prove they could be outsmarted.'
+            subtitle: 'Those who look outward dream, but those who look inward awaken.'
           },
           {
             name: 'coreyweb',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/coreyweb/128.jpg',
-            subtitle: 'It is often said that the best way to learn a foreign language is to go to the country where it is spoken.'
+            subtitle: 'I can translate from German to English pretty well, but the other way around is more difficult.'
           },
           {
             name: 'snowshade',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/snowshade/128.jpg',
-            subtitle: 'Sometimes, all you need to do is completely make an ass of yourself and laugh it off to realise that life isn’t so bad after all.'
+            subtitle: 'If a student and his or her professor bore each other, then both are wasting their time.'
           },
           {
             name: 'areus',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/areus/128.jpg',
-            subtitle: 'Red is greener than purple, for sure.'
+            subtitle: 'Dont step on the broken glass.'
           },
           {
             name: 'holdenweb',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/holdenweb/128.jpg',
-            subtitle: 'Writing a list of random sentences is harder than I initially thought it would be.'
+            subtitle: 'Ferrari is the only company that has raced every season of formula one since the series began in 1950.'
           },
         ]
 
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
           {
             name: 'unterdreht',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/unterdreht/128.jpg',
-            subtitle: 'I was told there is a difference between temper and temperament. How can one explain this difference?'
+            subtitle: 'The sky is clear; the stars are twinkling.'
           },
           {
             name: 'heyimjuani',
@@ -219,46 +219,46 @@ const styles = StyleSheet.create({
           {
             name: 'collegeman',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/collegeman/128.jpg',
-            subtitle: 'How do you think that Britons should vote in the upcoming referendum? What do you think the results will be like?'
+            subtitle: 'Going from child, to childish, to childlike is only a matter of time.'
           },
           {
             name: 'peejfancher',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/peejfancher/128.jpg',
-            subtitle: 'Nothing acts as a better antidote for romance than young men and women doing geometry together at eight o clock every morning.'
+            subtitle: 'His mind was blown that there was nothing in space except space itself.'
           },
           {
             name: 'andyisonline',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/andyisonline/128.jpg',
-            subtitle: 'He used to get confused between soldiers and shoulders, but as a military man, he now soldiers responsibility.'
+            subtitle: 'My Mum tries to be cool by saying that she likes all the same things that I do.'
           },
           {
             name: 'ateneupopular',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ateneupopular/128.jpg',
-            subtitle: 'The traffic is heavy here, especially in the morning.'
+            subtitle: 'Stop waiting for exceptional things to just happen.'
           },
           {
             name: 'ahmetalpbalkan',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ahmetalpbalkan/128.jpg',
-            subtitle: 'Car safety systems have come a long way, but he was out to prove they could be outsmarted.'
+            subtitle: 'Never underestimate the willingness of the greedy to throw you under the bus.'
           },
           {
             name: 'Stievius',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/Stievius/128.jpg',
-            subtitle: 'It is often said that the best way to learn a foreign language is to go to the country where it is spoken.'
+            subtitle: 'Everyone says they love nature until they realize how dangerous she can be.'
           },
           {
             name: 'kerem',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/kerem/128.jpg',
-            subtitle: 'Sometimes, all you need to do is completely make an ass of yourself and laugh it off to realise that life isn’t so bad after all.'
+            subtitle: 'He wore the surgical mask in public not to keep from catching a virus, but to keep people away from him.'
           },
           {
             name: 'osvaldas',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/osvaldas/128.jpg',
-            subtitle: 'Red is greener than purple, for sure.'
+            subtitle: 'It had been sixteen days since the zombies first attacked.'
           },
           {
             name: 'angelceballos',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/angelceballos/128.jpg',
-            subtitle: 'Writing a list of random sentences is harder than I initially thought it would be.'
+            subtitle: 'You re good at English when you know the difference between a man eating chicken and a man-eating chicken.'
           },
         ]
