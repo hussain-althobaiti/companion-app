@@ -210,58 +210,58 @@ const styles = StyleSheet.create({
 
     const LikesList = [
           {
-            name: 'Amy Farha',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/jarjan/128.jpg',
+            name: 'unterdreht',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/unterdreht/128.jpg',
             subtitle: 'I was told there is a difference between temper and temperament. How can one explain this difference?'
           },
           {
-            name: 'adhamdannaway',
+            name: 'heyimjuani',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/heyimjuani/128.jpg',
             subtitle: '  I ll be going to Boston a few times this month for work.'
           },
           {
-            name: 'AM_Kn2',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/AM_Kn2/128.jpg',
+            name: 'collegeman',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/collegeman/128.jpg',
             subtitle: 'How do you think that Britons should vote in the upcoming referendum? What do you think the results will be like?'
           },
           {
-            name: 'BillS Kenney',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg',
+            name: 'peejfancher',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/peejfancher/128.jpg',
             subtitle: 'Nothing acts as a better antidote for romance than young men and women doing geometry together at eight o clock every morning.'
           },
           {
-            name: 'Brian Purkiss',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/BrianPurkiss/128.jpg',
+            name: 'andyisonline',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/andyisonline/128.jpg',
             subtitle: 'He used to get confused between soldiers and shoulders, but as a military man, he now soldiers responsibility.'
           },
           {
-            name: 'Bryan Horsey',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/BryanHorsey/128.jpg',
+            name: 'ateneupopular',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ateneupopular/128.jpg',
             subtitle: 'The traffic is heavy here, especially in the morning.'
           },
           {
-            name: 'ruzinav',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ruzinav/128.jpg',
+            name: 'ahmetalpbalkan',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ahmetalpbalkan/128.jpg',
             subtitle: 'Car safety systems have come a long way, but he was out to prove they could be outsmarted.'
           },
           {
-            name: 'brynn',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
+            name: 'Stievius',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/Stievius/128.jpg',
             subtitle: 'It is often said that the best way to learn a foreign language is to go to the country where it is spoken.'
           },
           {
-            name: 'Skyhartman',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/Skyhartman/128.jpg',
+            name: 'kerem',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/kerem/128.jpg',
             subtitle: 'Sometimes, all you need to do is completely make an ass of yourself and laugh it off to realise that life isn’t so bad after all.'
           },
           {
-            name: 'Isary Amairani',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/IsaryAmairani/128.jpg',
+            name: 'osvaldas',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/osvaldas/128.jpg',
             subtitle: 'Red is greener than purple, for sure.'
           },
           {
-            name: 'Karimmove',
-            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/Karimmove/128.jpg',
+            name: 'angelceballos',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/angelceballos/128.jpg',
             subtitle: 'Writing a list of random sentences is harder than I initially thought it would be.'
           },
         ]
