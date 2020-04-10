@@ -14,11 +14,7 @@ const InChat = (props) => {
         </View>            
         </ScrollView>
         <View style={styles.input}>
-<<<<<<< HEAD
-            <TextInput placeholder='  message... '/>
-=======
             <TextInput placeholder='message...'/>
->>>>>>> a5e759d09384c5e52b9cf83cb13e34d7cbe804f1
         </View>
         </View>
     )
