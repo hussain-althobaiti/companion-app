@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
           {
             name: 'joelhelin',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/joelhelin/128.jpg',
-            subtitle: 'The traffic is heavy here, especially in the morning.'
+            subtitle: 'I may struggle with geography, but Im sure Im somewhere around here.'
           },
           {
             name: 'kushsolitary',
