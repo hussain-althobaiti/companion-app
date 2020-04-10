@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         
     const NewList = [
           {
-            name: 'Amy Farha',
+            name: 'jarjan',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/jarjan/128.jpg',
             subtitle: 'I was told there is a difference between temper and temperament. How can one explain this difference?'
           },

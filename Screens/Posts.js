@@ -10,11 +10,12 @@ const Posts = (props) => {
     return (
 
         <View style={styles.Posts}>
-        <View style={styles.Post} > 
+        <View style={styles.Post}>
          <Avatar rounded size="medium" source={props.Avatar}/>
+         <Text>{props.title}</Text>
          <View >
          <Text style={styles.text}> {props.text}</Text>
-          </View>
+        </View>
         <View style={styles.icons} >
          <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#F95959')}else{setstate('#fff')}}} color={state} name='heart' size={30}/>
          <MaterialIcons onPress={()=>{}}  name='comment' color='#fff' size={30}/>
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
         paddingLeft:'2%',
         paddingRight:'2%',
     },
+
     text:{
         fontSize:15,
         padding:"4%",
