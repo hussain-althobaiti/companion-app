@@ -6,9 +6,6 @@ import Posts from './Posts';
 
 const Tab = createMaterialTopTabNavigator();
 
-
-
-
 function Likes(props) {
   return (
     <ScrollView>
