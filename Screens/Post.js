@@ -1,5 +1,5 @@
 import React ,{useState, useEffect} from 'react'
-import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView} from 'react-native'
+import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView,Alert} from 'react-native'
 import { FontAwesome,Feather,MaterialCommunityIcons ,AntDesign ,MaterialIcons} from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
@@ -30,15 +30,18 @@ const Post = (props) => {
         <TextInput placeholder='what’s happening ?' />
         <View style={styles.icons}>
           <View style={styles.icon}>
-        <FontAwesome onPress={_pickImage} name='photo' size={30}/>
+        <AntDesign onPress={_pickImage} name='picture' size={30}/>
           </View>
           <View style={styles.icon}>
-        <Feather name="camera" size={30}  onPress={() => {              setType(
+        <AntDesign name="camerao" size={30}  onPress={()=> {              setType(
                 type === Camera.Constants.Type.back
                   ? Camera.Constants.Type.front
                   : Camera.Constants.Type.back
               );}}/>
               </View>
+          <View style={styles.send}>
+        <MaterialIcons onPress={()=>{ Alert.alert('send','send')}} name='send' size={30}/>
+          </View>
         </View>
         </View>
         </View>
@@ -80,8 +83,11 @@ const styles = StyleSheet.create({
     flexDirection:'row'
   },
   icon:{    
-    marginTop:'27%',
+    marginTop:'30%',
     paddingLeft:'1.5%'
   },
-})
+  send:{    
+    marginTop:'30%',
+    paddingLeft:'72%'
+  },})
 

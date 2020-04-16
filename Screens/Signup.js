@@ -8,7 +8,7 @@ function Signup(props) {
   const [state, setstate] = useState(
     {
     name:'1',
-    email:'1@1.com',
+    email:'1',
     password:'123456',
     error: '',
     valid:false,
