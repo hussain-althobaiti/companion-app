@@ -1,5 +1,5 @@
 import React, {useState}from 'react'
-import { StyleSheet, View,Text, ScrollView,TouchableHighlight,Alert} from 'react-native'
+import { StyleSheet, View,Text, ScrollView,TouchableHighlight,Alert,Modal} from 'react-native'
 import { Button ,Tile ,Avatar } from '../node_modules/react-native-elements';
 import {MaterialIcons,AntDesign } from '@expo/vector-icons';
 
@@ -11,18 +11,16 @@ const Posts = (props) => {
 
         <View style={styles.Posts}>
         <View style={styles.Post}>
-         <Avatar rounded size="medium" source={props.Avatar}/>
+         <Avatar rounded size="medium" source={props.Avatar} onPress={(e) =>{ Alert.alert('USERNAME','ABOUT THE USER')}}/>
          <Text>{props.title}</Text>
          <View >
          <Text style={styles.text}> {props.text}</Text>
         </View>
         <View style={styles.icons} >
          <AntDesign  onPress={()=>{if(state==='#fff'){setstate('#F95959')}else{setstate('#fff')}}} color={state} name='heart' size={30}/>
-         <MaterialIcons onPress={()=>{}}  name='comment' color='#fff' size={30}/>
+         <MaterialIcons onPress={()=>{ Alert.alert('','comment.........................................................comment.........................................................comment.........................................................comment.........................................................comment.........................................................comment.........................................................')}}  name='comment' color='#fff' size={30}/>
          </View>
-          <TouchableHighlight  activeOpacity={0.3} underlayColor="#fff" onPress={() =>{ alert('Pressed!')}}>
-              <Text>show comment </Text>
-           </TouchableHighlight>
+         
         </View>
     </View>
     )

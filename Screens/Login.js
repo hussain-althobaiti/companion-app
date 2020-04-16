@@ -23,7 +23,6 @@ function Login(props) {
      const password=(state.password)  
      
      firebase.auth().signInWithEmailAndPassword(email,password).then(() =>props.navigation.navigate('Main')).catch((e)=>setstate({...state, error:e}))
-     console.log(state , '55555555 ');
     };
 
 

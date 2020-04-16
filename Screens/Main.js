@@ -11,8 +11,6 @@ import Search from './Search';
 import Chat from './Chat';
 
 
-  
-
   const Tab = createBottomTabNavigator();
   
   const NarBar = () => {

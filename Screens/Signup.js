@@ -24,7 +24,6 @@ function Signup(props) {
       const error=(state.error)  
        
        firebase.auth().createUserWithEmailAndPassword(email,password).then(() =>props.navigation.navigate('Login')).catch((e)=>setstate({...state, error:e}))
-       console.log(state , '55555555 ');
 
       };
   
