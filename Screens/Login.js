@@ -7,10 +7,9 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 function Login(props) {
 
-
   const [state, setstate] = useState(
     {
-    email:'1',
+    email:'email@email.com',
     password:'1',
     error: ' ',
     valid:false,
@@ -84,10 +83,6 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent:'center',
       alignItems:'center',
-    },
-  
-    TextInput:{
-      borderWidth:2,
     },
   
     Buttons:{

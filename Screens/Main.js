@@ -16,10 +16,10 @@ import Chat from './Chat';
   const NarBar = () => {
       
     return (
-        <Tab.Navigator tabBarOptions={{activeTintColor: '#e91e63',showLabel: false, }}>
+        <Tab.Navigator tabBarOptions={{activeTintColor: '#e91e63',showLabel:false, }}>
           <Tab.Screen  name="Home" component={Home} options={{tabBarIcon: ({ color, size }) => (<SimpleLineIcons name="home" color={color} size={size} />)}}/>
           <Tab.Screen name="Search" component={Search} options={{tabBarIcon: ({ color, size }) => (<Ionicons name="md-search" color={color} size={size} />)}}/>
-          <Tab.Screen name="Post" component={Post} options={{tabBarIcon: ({ color, size }) => (<AntDesign name="pluscircleo" color={color} size={size} />)}}/>
+          <Tab.Screen name="Post" component={Post} options={{tabBarIcon: ({ color, size }) => (<AntDesign name="pluscircleo" color={color} size={35} />)}}/>
           <Tab.Screen name="Profile" component={Profile} options={{tabBarIcon: ({ color, size }) => (<AntDesign name="user" color={color} size={size} />)}}/>
           <Tab.Screen name="Chat" component={Chat} options={{tabBarIcon: ({ color, size }) => (<MaterialIcons name="chat-bubble-outline" color={color} size={size} />)}}/>
         </Tab.Navigator>

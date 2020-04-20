@@ -9,7 +9,7 @@ import Login from './Login';
 
 function HomeScreen(props) {
   return (
-          <View style={styles.container}>
+        <View style={styles.container}>
           <TouchableNativeFeedback>
           <View style={styles.image}>
           <Image style={{width:'90%',height:'25%'}} source={require('../assets/loginLogo.png')} />

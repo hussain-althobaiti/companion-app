@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
           {
             name: 'unterdreht',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/unterdreht/128.jpg',
-            subtitle: 'The sky is clear; the stars are twinkling.'
+            subtitle: 'The sky is clear the stars are twinkling.'
           },
           {
             name: 'heyimjuani',

@@ -28,7 +28,7 @@ function Signup(props) {
       };
   
   return (
-    <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
+    <KeyboardAvoidingView behavior="padding" style={{ flex: 1}}>
       <View style={styles.container}>
             <TouchableNativeFeedback>
             <View style={styles.image}>
@@ -36,7 +36,6 @@ function Signup(props) {
             </View>
             </TouchableNativeFeedback>
             <View style={styles.Buttons}>
-            <SafeAreaView >
             <ImageBackground style={{width:'100%',height:'100%'}} source={require('../assets/BG.png')}>
             <View style={styles.TextInput}>
             <TextInput placeholder='Name' onChangeText={(text)=>setstate({...state, name:text})} />
@@ -57,7 +56,7 @@ function Signup(props) {
               <Text style={styles.error} >{state.error.message}</Text>
             </View>
             </ImageBackground>
-            </SafeAreaView >
+            
             </View>  
           </View>
             </KeyboardAvoidingView>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView,} from 'react-native'
+import { StyleSheet, Text, View ,TextInput,KeyboardAvoidingView,Alert} from 'react-native'
 import { Avatar  ,Button } from "react-native-elements";
 import { ScrollView } from 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,8 +19,8 @@ const EditProfile =(props )=>{
         <TextInput style={styles.input}  placeholder='Birthday'/>
         <TextInput style={styles.input}  placeholder='Gender '/>
         <TextInput style={styles.input}  placeholder='About '/>
-        <TextInput style={styles.input}  placeholder='#####'/>
-        <TextInput style={styles.input}  placeholder='#####'/>
+        <TextInput style={styles.input}  placeholder='Hobbies'/>
+        <TextInput style={styles.input}  placeholder='Interests'/>
         </View>
 
         <KeyboardAvoidingView style={styles.Buttons}>
@@ -56,7 +56,7 @@ const Profile = (props ) => {
          <Text>Profile name</Text>
         <View style={styles.Buttons}>
          <Button buttonStyle={styles.Button} titleStyle={{color:state ,fontWeight:'bold',fontSize:20,width:'80%'}} onPress={()=>{if(state==='#000'){setstate('#F95959')}else{setstate('#000')}}} title="Follow"  />
-         <Button buttonStyle={styles.Button} titleStyle={{color:'#000'}} title="Message" />
+         <Button buttonStyle={styles.Button} titleStyle={{color:'#000'}} title="Message"onPress={()=>{ Alert.alert('send Message','Message')}} />
          </View>
         <View style={styles.about}>
             <Text>About</Text>
@@ -65,29 +65,18 @@ const Profile = (props ) => {
             </View>
         </View>
         <View style={styles.about}>
-            <Text>About</Text>
+            <Text>Hobbies</Text>
             <View>
                 <Text>Enim incididunt et culpa ad dolore elit aliqua dolore est enim do sint officia sunt.</Text>
             </View>
         </View>
         <View style={styles.about}>
-            <Text>About</Text>
+            <Text>Interests</Text>
             <View>
                 <Text>Enim incididunt et culpa ad dolore elit aliqua dolore est enim do sint officia sunt.</Text>
             </View>
         </View>
-        <View style={styles.about}>
-            <Text>About</Text>
-            <View>
-                <Text>Enim incididunt et culpa ad dolore elit aliqua dolore est enim do sint officia sunt.</Text>
-            </View>
-        </View>
-        <View style={styles.about}>
-            <Text>About</Text>
-            <View>
-                <Text>Enim incididunt et culpa ad dolore elit aliqua dolore est enim do sint officia sunt.</Text>
-            </View>
-        </View>
+
         </View>
         </ScrollView>
     )

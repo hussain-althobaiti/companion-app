@@ -7,7 +7,7 @@ import {Camera} from 'expo-camera';
 
 const Post = (props) => {
   const [type, setType] = useState(Camera.Constants.Type.back);
-  const [hasPermission, setHasPermission] = useState(null);
+  const [hasPermission, setHasPermission] = useState(true);
 
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Post = (props) => {
                 type === Camera.Constants.Type.back
                   ? Camera.Constants.Type.front
                   : Camera.Constants.Type.back
-              );}}/>
+              );Alert.alert('Camera')}}/>
               </View>
           <View style={styles.send}>
         <MaterialIcons onPress={()=>{ Alert.alert('send','send')}} name='send' size={30}/>
